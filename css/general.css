@@ -1,0 +1,56 @@
+/* 
+font-family: 'Indie Flower', cursive;
+font-family: 'Inter', sans-serif;
+ */
+:root {
+  --nav-height: 8.7rem;
+  
+  --primary-color: hsla(0, 100%, 50%, 1);
+  --secondary-color: #ffff;
+  --title: hsla(0, 1%, 27%, 1);
+  --paragraph: hsla(0, 0%, 75%, 1);
+  
+  
+  --mustard-yellow: hsla(61, 100%, 50%, 1);
+  
+  
+  font-size: 62.5%;
+}
+
+/* body::-webkit-scrollbar {
+  width: 1.2rem;
+  display: block;
+}
+
+body::-webkit-scrollbar-track {
+  background: initial;        /* color of the tracking area */
+/* } */
+
+/* body::-webkit-scrollbar-thumb { */
+  /* background-color: var(--primary-color);    color of the scroll thumb */
+  /* border-radius: 2rem;       roundness of the scroll thumb */
+/* } */
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+
+  width: 100vw;
+  height: 100%;
+  overflow: overlay;
+  
+  padding: 0;
+  background-color: var(--bg-light);
+  background-color: #E5E5E5;
+}
+
+a {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: min(50rem, 100%); 
+  padding-inline: 1.8rem;
+  margin-inline: auto;
+}

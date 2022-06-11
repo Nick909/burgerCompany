@@ -1,0 +1,86 @@
+
+#navigation {
+  display: flex;
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  background-color: white;
+
+  z-index: 100;
+}
+
+#navigation::before {
+  content: "";
+  width: 0;
+  height: 0;
+  background: var(--primary-color);
+  display: block;
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -100;
+}
+
+#navigation .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navigation .logo  {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+#navigation .logo svg {
+  width: 8rem;
+  height: auto;
+}
+
+#navigation .menu ul li a {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: white;
+}
+
+#navigation .menu .tel-nav {
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #FFFFFF;
+}
+
+#navigation .menu .btn-group__cart svg {
+  height: 3.7rem;
+  /* margin-right: 5.8rem; */
+}
+
+#navigation button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#navigation .open-menu,
+#navigation .close-menu {
+  right: 1.8rem;
+  top: 2.6%;
+}
+
+#navigation .close-menu path {
+  stroke: white;
+}
+
+#navigation .menu,
+#navigation .close-menu,
+#navigation .open-menu {
+  position: fixed;
+}
