@@ -17,17 +17,19 @@ function onScroll() {
   parallax('#test');
 }
 
-function parallax(sectionCurrent) {
+function parallax(sectionCurrent, topHigh, topPorcent) {
   const bodyScrollTop = $(document).scrollTop();
+  const screenBodyVieweHight = $(window).height();
+  const screenBodyVieweWidht = $(window).width();
+  
   const section = $(sectionCurrent);
   const sectionTop = section.offset().top;
   const sectionSpan = $(`${sectionCurrent} span`);
-  // const sectionSpanTop = sectionSpan.position();
-  
-  sectionSpan.css('top', `calc((${bodyScrollTop/10}rem + ${50}%) - (${sectionTop/10}rem) + ${12.2}%)`);
-  if(sectionCurrent === '#home'){
-  } else {
-    // sectionSpan.css('top', `calc((${bodyScrollTop}px + ${50}%)) - ${sectionTop}px`);
-  }
+
+  if(topHigh === undefined || topHigh === null) {
+    ((screenBodyVieweWidht < screenBodyVieweHight) && screenBodyVieweHight > 600)? topHigh = 50 : topHigh = 10;
+  }  
+
+  sectionSpan.css('top', `calc((${bodyScrollTop/10}rem + ${0}% + ${topHigh}rem) - (${sectionTop/10}rem)`);
 }
 
