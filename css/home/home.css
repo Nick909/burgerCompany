@@ -9,20 +9,21 @@
   overflow: hidden;
   box-sizing: content-box;
   display: flex;
+  background-color: var(--primary-color);
 }
 
-#home::before {
+/* #home::before {
   content: "";
-  width: 100%;
+  width: 0%;
   height: 100%;
-  background: var(--primary-color);
+  background: white;
   display: block;
   
   position: absolute;
   top: 0;
   right: 0;
   z-index: -100;
-}
+} */
 
 #home p {
   text-align: start;
@@ -119,6 +120,8 @@ section span {
 
   left: 50%;
   right: 50%;
+
+  transition: 0.8s ease;
 
   z-index: -10;
 }
