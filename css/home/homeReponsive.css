@@ -129,3 +129,9 @@
       z-index: -100;
   }
 }
+
+@media screen and (max-height: 600px) {
+  #home span {
+    top: calc(2% + var(--nav-height));
+  }
+}

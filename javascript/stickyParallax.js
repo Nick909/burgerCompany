@@ -26,7 +26,7 @@ $(window).on('orientationchange', () => {
 
 function changesInDimensions(n) {
   parallax('#home', n);
-  parallax('#test', n);
+  parallax('#menu', n);
 }
 
 
@@ -36,14 +36,12 @@ function parallax(sectionCurrent, topHigh, topPorcent) {
   const screenBodyViewHight = $(window).height();
   const screenBodyViewWidht = $(window).width();
   
-  const section = $(sectionCurrent);
-  const sectionTop = section.offset().top;
+  const sectionTop = $(sectionCurrent).offset().top;
   const sectionSpan = $(`${sectionCurrent} span`);
   
   if(topHigh === undefined || topHigh === null) {
-    ((screenBodyViewWidht < screenBodyViewHight) || (screenBodyViewHight > 600 ))? 
-    topHigh = 50 : topHigh = 10;
-  }  
+    ((screenBodyViewWidht < screenBodyViewHight))? topHigh = 50 : topHigh = 10;
+  }
   
   sectionSpan.css('top', `calc((${bodyScrollTop/10}rem + ${0}% + ${topHigh}rem) - (${sectionTop/10}rem)`);
 }

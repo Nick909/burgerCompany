@@ -4,6 +4,9 @@ font-family: 'Inter', sans-serif;
  */
 :root {
   --nav-height: 8.7rem;
+  --title-h1:  4.6rem;
+  --title-h2:  2.8rem;
+  --sub-title-h4: 2rem;
   
   --primary-color: hsla(0, 100%, 50%, 1);
   --secondary-color: #ffff;
@@ -53,4 +56,22 @@ a {
   width: min(50rem, 100%); 
   padding-inline: 1.8rem;
   margin-inline: auto;
+}
+
+section span {
+  font-weight: 800;
+  font-size: 13.5rem;
+  color: black;
+
+  opacity: 0.2;
+  transform: rotate(-90deg);
+
+  position: absolute;
+
+  left: 50%;
+  right: 50%;
+
+  /* transition: 0.8s ease;  */
+
+  z-index: -10;
 }
