@@ -2,6 +2,11 @@
 font-family: 'Indie Flower', cursive;
 font-family: 'Inter', sans-serif;
  */
+
+* {
+  /* box-sizing: content-box; */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 :root {
   --nav-height: 8.7rem;
   --title-h1:  4.6rem;
@@ -15,8 +20,11 @@ font-family: 'Inter', sans-serif;
   
   
   --mustard-yellow: hsla(61, 100%, 50%, 1);
-  
-  
+  --sunset-orange: hsla(0, 94%, 65%, 1);
+  --sunshade: hsla(25, 91%, 64%, 1);
+
+  --bg-light: #E5E5E5;
+
   font-size: 62.5%;
 }
 
@@ -45,7 +53,6 @@ body {
   
   padding: 0;
   background-color: var(--bg-light);
-  background-color: #E5E5E5;
 }
 
 a {

@@ -8,7 +8,6 @@
   z-index: 0;
   overflow: hidden;
   box-sizing: content-box;
-  
 }
 
 #menu header h4 {
@@ -26,11 +25,51 @@
   margin-bottom: 2.6rem;
 }
 
+#menu .content {
+  position: relative;
+}
+
+#menu [data-swipe] {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  
+}
+
+#menu [data-swipe] svg {
+  height: auto;
+  width: 6rem;
+  transition: transform 300ms;
+  touch-action: auto;
+}
+
+
+#menu [data-swipe] svg path {
+  stroke: var(--primary-color);
+}
+
+#menu [data-swipe="right"].active svg {
+  transform: translate(15%);
+}
+
+[data-swipe="left"].active svg {
+  transform: translate(-15%);
+}
+
+#menu [data-swipe="left"] {
+  left: 0;
+}
+
+#menu [data-swipe="right"] {
+  right: 0;
+}
+
 #menu .list-menu {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: .5rem;
+  gap: .2rem;
   /* overflow-x: hidden; */
   /* flex-wrap: wrap; */
   /* flex-direction: column; */
@@ -40,7 +79,13 @@
   flex-grow: 1;
   flex-basis: 100%;
   flex-shrink: 0;
+  /* margin-inline: 2%; */
+
 }
+
+#menu .list-menu:last-child {
+  margin-right: .5rem;
+} 
 
 #menu .list-menu__card {
   background-color: white;
@@ -82,7 +127,7 @@
   gap: 1.5rem;
 }
 
-#menu  .list-menu__order-now {
+#menu .list-menu__order-now {
   padding-block: .8rem;
   padding-inline: 1.8rem;
 

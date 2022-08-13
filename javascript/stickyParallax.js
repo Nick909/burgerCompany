@@ -27,6 +27,8 @@ $(window).on('orientationchange', () => {
 function changesInDimensions(n) {
   parallax('#home', n);
   parallax('#menu', n);
+  parallax('#blocks', n);
+  parallax('#social', n);
 }
 
 
@@ -44,4 +46,6 @@ function parallax(sectionCurrent, topHigh, topPorcent) {
   }
   
   sectionSpan.css('top', `calc((${bodyScrollTop/10}rem + ${0}% + ${topHigh}rem) - (${sectionTop/10}rem)`);
+
+  // sectionSpan.animate({top: (bodyScrollTop/10 + 0% + topHigh) - (sectionTop / 10)}, 0);
 }

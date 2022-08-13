@@ -1,0 +1,43 @@
+#social {
+  overflow: hidden;
+  padding-top: 10.5rem;
+  padding-bottom: 16.9rem;
+  position: relative;
+}
+
+#social .social__header {
+  margin-bottom: 8.3rem;
+}
+
+#social .social__header p {
+  color: black;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  -webkit-text-stroke-width: .01rem;
+  -webkit-text-stroke-color: var(--bg-light);
+}
+
+#social .social__social-network {
+  overflow-x: scroll;
+  padding-inline: 6.9rem;
+  height: 21.8rem;
+  
+}
+
+#social .social__social-network::-webkit-scrollbar {
+  display: none;
+}
+
+#social .social__block {
+  height: 21.8rem;
+  width: 96.3rem;
+}
+
+#social .social__social-network img {
+  height: auto;
+  width: 96.3rem;
+}
+
