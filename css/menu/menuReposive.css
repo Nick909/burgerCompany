@@ -3,6 +3,11 @@
   #menu {
     padding-top: 7.7rem;
   }
+
+  #menu header {
+    margin-right: 3rem;
+  }
+  
   
   #menu header h4 {
     font-size: var(--sub-title-h4-web);

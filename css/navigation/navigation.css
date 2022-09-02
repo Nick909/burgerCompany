@@ -39,6 +39,10 @@
   height: auto;
 }
 
+nav#navigation .logo__text {
+  display: none;
+}
+
 #navigation .menu ul li a {
   font-size: 2.2rem;
   font-weight: 700;
@@ -69,7 +73,7 @@
 #navigation .open-menu,
 #navigation .close-menu {
   right: 1.8rem;
-  top: 2.5%;
+  top: 2%;
 }
 
 #navigation .close-menu path {

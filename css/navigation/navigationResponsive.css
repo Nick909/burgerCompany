@@ -29,6 +29,7 @@
   nav#navigation::before {
     width: 50%;
     height: 100%;
+    transition: width 400ms
   }
 
   nav#navigation .wrapper .menu {
@@ -48,6 +49,22 @@
     margin-top: 1.2rem;
     margin-right: 10rem;
     margin-left: 2rem;
+
+    text-decoration: none;
+  }
+
+  nav#navigation .logo__text {
+    display: none;
+    font-size: 1.8rem;
+    font-family: 'Indie Flower';
+    font-weight: bold;
+
+    margin-bottom: 0.6rem;
+  }
+
+  nav#navigation .logo__text,
+  nav#navigation .menu ul a {
+    transition: color 400ms;
   }
 
   nav#navigation .menu ul {
@@ -55,12 +72,13 @@
     gap: 2.1rem;
     
     list-style: none;
-    margin-right: 30rem;
+    margin-right: 32rem;
   }
  
-  nav#navigation .menu ul li a {
+  nav#navigation .menu ul a {
     font-size: 1.1rem;
     color: var(--primary-color);
+    text-align: center; 
   }
 
   nav#navigation .menu ul li a.active { 
@@ -79,11 +97,28 @@
     width: 3.2rem;
   }
 
+  nav#navigation.scroll::before {
+    width: 100%;
+  }
+
+  nav#navigation .logo--dis .logo__text {
+    display: block;
+  }
+
+  nav#navigation.scroll .logo__text,
+  nav#navigation .menu ul li a.link--color {
+    color: white;
+  }
+
+  nav#navigation .menu ul li a.active {
+    color: black;
+  }
+
   nav#navigation.navigation--tam {
     height: 4.4rem;
   }
 
-  nav#navigation .logo--dis {
+  nav#navigation .logo--dis img {
     display: none;
   }
 
@@ -98,4 +133,31 @@
     transition: all 0.4s;
   }
 
+  nav#navigation .menu ul li a::after {
+    content: '';
+    height: 2px;
+    background-color: var(--primary-color);
+
+    position: relative;
+    bottom: -0.9rem;
+    display: block;
+
+    margin-inline: 50%;
+
+    transition: margin 0.2s;
+  }
+
+  nav#navigation.scroll .menu li a::after {
+    background-color: white;
+  }
+
+  nav#navigation .menu li a.active::after {
+    background-color: black;
+  }
+
+  nav#navigation .menu li a.active::after,
+  nav#navigation .menu li a:hover::after {
+    padding-inline: 0.8rem;
+    margin-inline: 0;
+  }
 }
