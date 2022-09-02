@@ -85,3 +85,27 @@ nav#navigation .logo__text {
 #navigation .open-menu {
   position: fixed;
 }
+
+@media screen and (max-width: 1024px) {
+  #navigation .menu ul li:active {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    width: 100vw;
+    color: var(--primary-color);
+
+    /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75) inset; */
+  }
+  #navigation .menu ul li:active > *,
+  #navigation .menu ul li a:active {
+    color: var(--primary-color);
+    /* text-shadow: 0.1em 0.1em 0.1em #333 */
+  }
+
+  #navigation .menu ul li:active,
+  #navigation .menu ul li a:active {
+    transition: all 0.2s;
+
+    
+  }
+
+}

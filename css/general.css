@@ -64,6 +64,10 @@ body {
   background-color: var(--bg-light);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   cursor: pointer;
 }

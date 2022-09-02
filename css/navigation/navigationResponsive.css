@@ -146,13 +146,21 @@
 
     transition: margin 0.2s;
   }
-
+  
+  nav#navigation .menu li a.active::after {
+    background-color: black;
+  }
+  
   nav#navigation.scroll .menu li a::after {
     background-color: white;
   }
 
-  nav#navigation .menu li a.active::after {
-    background-color: black;
+  nav#navigation.scroll .menu ul li a.active {
+    color: white;
+  }
+
+  nav#navigation.scroll .menu li a.active::after {
+    background-color: white;
   }
 
   nav#navigation .menu li a.active::after,

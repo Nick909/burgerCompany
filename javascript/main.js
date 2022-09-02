@@ -7,7 +7,16 @@ function closeMenu() {
   document.body.classList.remove('menu-expanded');
 }
 
-$(document).on('scroll',  () => changeNav());
+$(window).on('resize', () => {
+  if(window.innerWidth > 1024) closeMenu();
+})
+
+
+$(document).on('scroll',  () => {
+  changeNav()
+  activateMenuAtCurrentSection('home');
+  activateMenuAtCurrentSection('menu');
+});
 
 function changeNav () {
   const tam = 60;
@@ -39,5 +48,35 @@ function changeNav () {
   } else {
     link.removeClass('link--color');
     navBefore.removeClass('scroll');
+  }
+}
+
+
+function activateMenuAtCurrentSection(sec) {
+  const section = document.querySelector(`#${sec}`);
+  const targetLine = scrollY + innerHeight / 2;
+
+  //verificar se a sesanção passou da linha
+  //quais dados vou precisar?
+  
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
+
+  const sectionTopReachOrPassedTargetLine =  targetLine >= sectionTop;
+
+
+  const sectionEndsAt = sectionTop + sectionHeight;
+
+  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine; 
+
+  const sectionBundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
+  
+  const sectionId = section.getAttribute('id');
+  const menuElement = document.querySelector(`#navigation .menu a[href*=${sectionId}]`);
+  console.log(menuElement, 'tes');
+
+  menuElement.classList.remove('active');
+  if (sectionBundaries) {
+    menuElement.classList.add('active');
   }
 }
