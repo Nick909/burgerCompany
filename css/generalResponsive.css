@@ -31,9 +31,23 @@ body::-webkit-scrollbar-track {
   /* border-radius: 2rem;       roundness of the scroll thumb */
 /* } */
 
+
+@media screen and (max-height: 600px) {
+  #home span {
+    top: calc(2% + var(--nav-height));
+  }
+
+  section span {
+    position: absolute;
+    transform: rotate(0deg);
+    left: 0;
+    right: 0;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   :root {
-    --nav-height: 12.5rem;
+    --nav-height: 10.5rem;
   }
   
   body {
@@ -52,21 +66,22 @@ body::-webkit-scrollbar-track {
   
   .wrapper {
     width: min(102.4rem, 100%);
-    /* width: 100%; */
-    padding-inline: 3.8rem;
-    margin-inline: auto;
-  }
-}
-
-@media screen and (max-height: 600px) {
-  #home span {
-    top: calc(2% + var(--nav-height));
+    padding-inline: 0;
+    /* margin-inline: auto; */
   }
 
   section span {
+    font-size: 11.6rem;
+
+    font-weight: 800;
+    /* color: white; */
+  
+    opacity: 0.15;
+    transform: rotate(-90deg);
+  
     position: absolute;
-    transform: rotate(0deg);
-    left: 0;
-    right: 0;
+    left: 89rem;
+    right: 2rem;  
   }
 }
+

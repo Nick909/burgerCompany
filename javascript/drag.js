@@ -7,8 +7,8 @@ $(function () {
 
 function selectList() {
   for(let i = 0; i < menu.length; i += 1) {
-    $(menu[i]).on('touchstart', dragStart);
-    $(menu[i]).on('mousedown', dragStart);
+    // $(menu[i]).on('touchstart', dragStart);
+    // $(menu[i]).on('mousedown', dragStart);
     $(menu[i]).siblings().children().on('click', dragStart)
     stado.push({translatePosition: 0, menu: menu[i]});
   }

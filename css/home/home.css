@@ -12,19 +12,6 @@
   background-color: var(--primary-color);
 }
 
-/* #home::before {
-  content: "";
-  width: 0%;
-  height: 100%;
-  background: white;
-  display: block;
-  
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -100;
-} */
-
 #home p {
   text-align: start;
 }

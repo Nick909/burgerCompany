@@ -1,13 +1,11 @@
 
 @media screen and (min-width: 1024px) {
   #home {
-    display: flex;
-    padding-top: var(--nav-height);
-    height: 100vh;
+    margin-top: var(--nav-height);
+    padding-top: calc(-(var(--nav-height)));
+    height: calc(100vh - var(--nav-height));
     background-color: white;
-    position: relative;
     z-index: 0;
-    overflow: hidden;
   }
   
   #home::before {
@@ -28,59 +26,60 @@
   }
   
   #home .wrapper {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
+    /* justify-content: inherit; */
     position: relative;
     height: calc(100vh - (var(--nav-height) + 8%));
   }
-  
+
   #home header {
     display: flex;
     flex-direction: column;
-    width: 27.3rem;
-    margin-right: 38rem;
+    /* width: 24rem; */
   }
   
   #home header h1 {
-    font-weight: 700;
-    font-size: 4.6rem;
-    margin-bottom: 2.6rem;
+    font-size: var(--title-h1-web);
+    margin-bottom: 1rem;
     color: var(--title);
   }
   
   #home header p {
-    font-weight: 400;
-    font-size: 1.3rem;
+    font-size: var(--paragraph-p-web);
     line-height: 1.7rem;
-    margin-bottom: 2.6rem;
+    margin-bottom: 1.2rem;
+    color: var(--paragraph)
   }
   
   #home .home-button {
     border-radius: 1rem;
     background-color: var(--primary-color);
-    padding-block: .8rem;
-    padding-inline: 1.6rem;
+    padding-block: .6rem;
+    padding-inline: 1.2rem;
   
     width: 40%;
     color: white;
   
     text-decoration: none;
     text-transform: uppercase;
-  
+
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: var(--text-button-on-web);
   }
   
   #home .first-food {
-    width: 39.5rem;
-    position: absolute;
+    width: 39.7rem;
+    padding-bottom: 4rem;
+    /* position: absolute;
     margin: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-46%); */
   }
   
   #home .first-text {
-    width: 15.3rem;
+    width: 15rem;
+    text-align: left;
+    margin-right: 6rem;
   }
   
   #home .first-text h3 {
@@ -93,22 +92,13 @@
   #home .first-text p {
     color: white;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: var(--paragraph-p-web);
     line-height: 1.7rem;
   }
   
   #home span {
-    font-weight: 800;
-    font-size: 13.5rem;
     color: white;
-  
-    opacity: 0.15;
-    transform: rotate(-90deg);
-  
-    position: absolute;
-    top: 60%;
-    left: calc(98% - (13.5rem + 4rem));
-    right: .73rem;
+    top: calc(30% + var(--nav-height));
   }
   
   #test {
@@ -117,21 +107,16 @@
   }
   
   #test::before {
-      content: "";
-      width: 50%;
-      height: 100%;
-      background: var(--primary-color);
-      display: block;
-      
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -100;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: var(--primary-color);
+    display: block;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100;
   }
 }
 
-@media screen and (max-height: 600px) {
-  #home span {
-    top: calc(2% + var(--nav-height));
-  }
-}

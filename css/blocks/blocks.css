@@ -81,8 +81,8 @@
 }
 
 #blocks .block__button {
-  padding-block: .2rem;
-  margin-inline: .9rem;
+  /* padding-block: .2rem; */
+  /* margin-inline: .9rem; */
   background-color: #fff;
   border-radius: 1rem;
 }
@@ -93,6 +93,8 @@
   font-size: 1.8rem;
 
   text-decoration: none;
+  text-transform: uppercase;
+  
   color: var(--primary-color);
 }
 

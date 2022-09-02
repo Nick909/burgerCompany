@@ -10,6 +10,10 @@
   box-sizing: content-box;
 }
 
+#menu header {
+  margin-right: 3rem;
+}
+
 #menu header h4 {
   font-family: 'Indie Flower';
   font-weight: 400;
@@ -80,7 +84,6 @@
   flex-basis: 100%;
   flex-shrink: 0;
   /* margin-inline: 2%; */
-
 }
 
 #menu .list-menu:last-child {
@@ -135,9 +138,11 @@
   font-weight: 400;
   font-size: 1.2rem;
 
-  border: 1px solid var(--primary-color);
+  border: 0.4px solid var(--primary-color);
   border-radius: 1.3rem;
 
   text-align: center;
   text-decoration: none;
+
+  text-transform: uppercase;
 }

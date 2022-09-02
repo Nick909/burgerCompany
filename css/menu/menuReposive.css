@@ -1,0 +1,72 @@
+
+@media screen and (min-width: 1024px) { 
+  #menu {
+    padding-top: 7.7rem;
+  }
+  
+  #menu header h4 {
+    font-size: var(--sub-title-h4-web);
+  }
+
+  #menu header h2 {
+    font-size: var(--title-h2-web);
+    margin-bottom: 7.6rem;
+  }
+
+  #menu [data-swipe] {
+    display: none;
+  }
+
+  #menu .list-menu {
+    /* padding-left: 5%; */
+    gap: 4.8rem;
+    margin-bottom: 5.1rem;
+    margin-left: 10%;
+  }
+
+  #menu .list-menu > .list-menu__item {
+    flex-grow: initial;
+    flex-basis: initial;
+    flex-shrink: initial;
+    /* margin-inline: 2%; */
+  }
+
+  #menu .list-menu__card {
+    width: 20.1rem;
+  }
+
+  #menu .list-menu__card img {
+    width: 14.4rem;
+    margin-bottom: .5rem;
+  }
+
+  #menu .list-menu__card h3 {
+    font-size: var(--title-h3-web);
+    margin-bottom: .23rem;
+  } 
+
+  #menu .list-menu__card p {
+    font-size: var(--paragraph-p-web);
+    margin-bottom: 1.4rem;
+  }
+
+  #menu .list-menu__buttons {
+    gap: 1rem;
+  }
+
+  #menu .list-menu__cart svg {
+    width: 3.2rem;
+    height: auto;
+  }
+
+  #menu .list-menu__order-now {
+    padding-block: .5rem;
+    padding-inline: 1.2rem;
+    
+    border-radius: .8rem;
+    
+    font-size: var(--text-button-on-web);
+
+    margin-bottom: 0.7rem;
+  }
+}

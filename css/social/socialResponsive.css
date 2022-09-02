@@ -1,0 +1,38 @@
+@media screen and (min-width: 1024px) {
+  #social {
+    padding-bottom: 10.9rem;
+  }
+
+  #social .social__header {
+    margin-top: 6rem;
+    margin-left: 20rem;
+  }
+
+  #social .social__header h1 {
+    font-size: var(--title-h1-web);
+  }
+
+  #social .social__header p {
+    font-size: 1.8rem;
+    color: var(--paragraph);
+  }
+
+  #social .social__social-network {
+    width: min(102.4rem, 100%);
+    margin-inline: auto;
+  }
+
+  #social .social__social-network img  {
+    min-width: 96.6rem;
+    margin-left: 22rem;
+    padding-right: 10rem;
+  }
+
+  #social span {
+    left: initial;
+    right: initial;
+    bottom: initial;
+  
+    transform: translate(-150%, -30%) rotate(-90deg);
+  }
+}

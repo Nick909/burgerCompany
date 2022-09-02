@@ -3,7 +3,7 @@ $(document).on('scroll',  () => changesInDimensions());
 
 $(window).on('resize', () => {
   let topHigh = undefined;
-  if(window.innerHeight < 600) {
+  if(window.innerHeight < 600 ) {
    topHigh = 10;
   }else {
    topHigh = 50;
@@ -27,7 +27,6 @@ $(window).on('orientationchange', () => {
 function changesInDimensions(n) {
   parallax('#home', n);
   parallax('#menu', n);
-  parallax('#blocks', n);
   parallax('#social', n);
 }
 
@@ -41,11 +40,15 @@ function parallax(sectionCurrent, topHigh, topPorcent) {
   const sectionTop = $(sectionCurrent).offset().top;
   const sectionSpan = $(`${sectionCurrent} span`);
   
-  if(topHigh === undefined || topHigh === null) {
+  if (window.innerWidth >= 768) {
+    topHigh = 37;
+  }
+  else if(topHigh === undefined || topHigh === null) {
     ((screenBodyViewWidht < screenBodyViewHight))? topHigh = 50 : topHigh = 10;
   }
+
+
   
   sectionSpan.css('top', `calc((${bodyScrollTop/10}rem + ${0}% + ${topHigh}rem) - (${sectionTop/10}rem)`);
-
   // sectionSpan.animate({top: (bodyScrollTop/10 + 0% + topHigh) - (sectionTop / 10)}, 0);
 }

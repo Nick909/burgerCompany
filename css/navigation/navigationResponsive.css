@@ -1,12 +1,5 @@
 
 @media screen and (min-width: 1024px) {
-  .wrapper {
-    width: min(102.4rem, 100%);
-    /* width: 100%; */
-    padding-inline: 3.8rem;
-    margin-inline: auto;
-  }
-
   nav#navigation .wrapper * {
     margin: 0;
     padding: 0;
@@ -24,55 +17,85 @@
 
   nav#navigation .close-menu,
   nav#navigation .open-menu,
-  nav#navigation .social-links {
+  nav#navigation .social-links,
+  nav#navigation .btn-group__text {
     display: none;
   }
-
+  
   #navigation {
     height: var(--nav-height);
   }
   
-  #navigation::before {
+  nav#navigation::before {
     width: 50%;
     height: 100%;
   }
-  
-  #navigation .wrapper {
-    justify-content: space-between;
-  }
 
-  #navigation .wrapper .menu {
+  nav#navigation .wrapper .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     position: relative;
   }
   
-  #navigation .logo {
-    width: auto;
-    height: 6.8rem;
-  }
-
-  #navigation .menu,
-  #navigation .logo {
+  nav#navigation .menu,
+  nav#navigation .logo {
     transform: translateX(0);
   }
 
-  #navigation .menu ul {
+  nav#navigation .logo {
+    width: 6.7rem;
+    height: auto;
+    margin-top: 1.2rem;
+    margin-right: 10rem;
+    margin-left: 2rem;
+  }
+
+  nav#navigation .menu ul {
     display: flex;
     gap: 2.1rem;
     
     list-style: none;
-  
-    margin-right: 28.9rem;
+    margin-right: 30rem;
   }
-  
-  #navigation .menu ul li a {
+ 
+  nav#navigation .menu ul li a {
+    font-size: 1.1rem;
     color: var(--primary-color);
   }
 
-  #navigation .menu ul li a.active { 
+  nav#navigation .menu ul li a.active { 
     color: black;
   }
   
+  nav#navigation .tel-nav {
+    font-size: 1.3rem;
+    margin-right: 2rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  nav#navigation .btn-group__cart svg {
+    width: 3.2rem;
+  }
+
+  nav#navigation.navigation--tam {
+    height: 4.4rem;
+  }
+
+  nav#navigation .logo--dis {
+    display: none;
+  }
+
+  nav#navigation .btn-group__cart--tam svg {
+    margin-top: 0.2rem;
+    width: 2.4rem;
+  }
+
+  nav#navigation.navigation--tam,
+  nav#navigation .logo--dis,
+  nav#navigation .btn-group__cart--tam svg {
+    transition: all 0.4s;
+  }
+
 }
